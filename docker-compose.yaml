@@ -1,0 +1,31 @@
+#version: '3.1'
+#
+#services:
+#  client-service:
+#    image: ion21/client-service:v3
+#    networks:
+#      - mynet
+#    ports:
+#      - "3000:80"
+#    environment:
+#      NODE_ENV: development
+#
+#networks:
+#  mynet:
+#    driver: bridge
+
+version: '3'
+services:
+  my-react-app:
+    container_name: client-cfp
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - NODE_ENV=production
+      - REACT_APP_PATH_TO=production
+#      - REACT_APP_API_URL=http://34.247.255.42:5000
+
+
+    ports:
+      - "3000:3000"

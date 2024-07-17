@@ -68,9 +68,13 @@ interface AdresaProps{
 
             let iDt=Object.values(MediuLocalitate).indexOf(persoana.adresaList[0].mediuLocalitate);
             let dsm:DataSimple={
-                code: 
+                code: iDt.toString(),
+                name: Object.values(MediuLocalitate)[iDt],
+                load: null
             }
-            setDefaTipLoca({code:iDt.toString(),name: persoana.adresaList[0].mediuLocalitate.valueOf()})
+
+            setDefaTipLoca(dsm);
+            // setDefaTipLoca({code:iDt.toString(),name: persoana.adresaList[0].mediuLocalitate.valueOf()})
             // Object.values(MediuLocalitate).map((t,index)=>{
             //     let ds:DataSimple={name: t.valueOf(),code: index.toString(),load: null }
             //     setTipLoca(prevState => [...prevState,ds]);
