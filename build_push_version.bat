@@ -19,7 +19,7 @@ echo Tagging the image...
 docker tag client-service:%SERVICE_VERSION%  ion21/client-service:%SERVICE_VERSION%
 
 echo Pushing the tagged image...
-docker push  ion21/client-service:%SERVICE_VERSION%
+docker push  ion21/client-cfp:%SERVICE_VERSION%
 
 echo Script completed.
 pause
