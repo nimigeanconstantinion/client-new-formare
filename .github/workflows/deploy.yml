@@ -1,4 +1,4 @@
-name: CD - Deploy Client-FP React
+name: CD - Deploy Client-New-Formare React
 
 on:
   push:
@@ -30,7 +30,7 @@ jobs:
         run: |
           chmod +x ci/build-publish.sh
           USERNAME=ion21 \
-          REPO=client-service \
+          REPO=client-new-formare \
           TAG=${{ env.BUILD_NUMBER }} \
           ci/build-publish.sh ./
 #

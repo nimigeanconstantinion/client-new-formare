@@ -16,8 +16,8 @@
 
 version: '3'
 services:
-  my-react-app:
-    container_name: client-cfp
+  client-new-formare:
+    container_name: client-new-formare
     build:
       context: .
       dockerfile: Dockerfile
