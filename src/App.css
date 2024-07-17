@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.custom-menu {
+  position: absolute;
+  right: 100%; /* poziționează meniul la dreapta opțiunii "New" */
+  margin-left: 12%; /* adaugă un spațiu între meniu și opțiunea "New" */
+}
+
+.p-component{
+  background-color: #B38EC4 !important;
+}
+
