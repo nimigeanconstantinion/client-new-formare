@@ -12,7 +12,8 @@ export default class Api{
 
     api<T, U>(path: string, method = "GET", body: U): Promise<HttpResponse<T>> {
 
-        const url = path;
+        const bpath="http://192.168.0.112:5000"
+        const url =bpath+path;
 console.log(url);
         const options: RequestInit = {
             method,
@@ -31,7 +32,7 @@ console.log(url);
 
     getNomCor = async (trunc:string): Promise<NomCor[]> => {
 
-        let response = await this.api("http://localhost:8080/api/v1/test/nomenclator/"+trunc, "GET", null);
+        let response = await this.api("/api/v1/test/nomenclator/"+trunc, "GET", null);
         if(response.status===200){
             console.log("Raspuns")
             console.log(response.data);
@@ -47,7 +48,7 @@ console.log(url);
 
     getPersByCnp = async (cnp:string): Promise<Persoana> => {
 
-        let response = await this.api(`http://192.168.0.112:8080/api/v1/loader/getpersbycnp/${cnp}`, "GET", null);
+        let response = await this.api(`/api/v1/loader/getpersbycnp/${cnp}`, "GET", null);
         if(response.status===200){
             console.log("Raspuns")
             console.log(response.data);
@@ -61,7 +62,7 @@ console.log(url);
 
     getCursByNr= async (nrc:number): Promise<Curs> => {
 
-        let response = await this.api(`http://localhost:8080/api/v1/loader/cursbyid/${nrc}`, "GET", null);
+        let response = await this.api(`/api/v1/loader/cursbyid/${nrc}`, "GET", null);
         if(response.status===200){
             // console.log("Raspuns")
             // console.log(response.data);
@@ -75,7 +76,7 @@ console.log(url);
 
     getAllCursuri= async (): Promise<Curs[]> => {
 
-        let response = await this.api(`http://localhost:8080/api/v1/loader/cursuriall`, "GET", null);
+        let response = await this.api(`/api/v1/loader/cursuriall`, "GET", null);
         if(response.status===200){
             console.log("Raspuns")
             console.log(response.data);
