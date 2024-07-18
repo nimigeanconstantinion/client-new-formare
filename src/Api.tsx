@@ -47,7 +47,7 @@ console.log(url);
 
     getPersByCnp = async (cnp:string): Promise<Persoana> => {
 
-        let response = await this.api(`http://127.0.0.1:8080/api/v1/loader/getpersbycnp/${cnp}`, "GET", null);
+        let response = await this.api(`http://codeplus.ddns.net:8080/api/v1/loader/getpersbycnp/${cnp}`, "GET", null);
         if(response.status===200){
             console.log("Raspuns")
             console.log(response.data);
