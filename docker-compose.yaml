@@ -17,6 +17,7 @@
 version: '3'
 services:
   client-new-formare:
+    image: ion21/client-new-formare:latest
     container_name: client-new-formare
     build:
       context: .

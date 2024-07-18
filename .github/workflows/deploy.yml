@@ -41,15 +41,15 @@ jobs:
 #      - name: Checkout other repository
 #        uses: actions/checkout@v2
 #        with:
-#          repository: 'nimigeanconstantinion/docker-compose-microservices'
+#          repository: 'nimigeanconstantinion/docker-formare'
 #          token: ${{ secrets.DEPLOY_ACCESS_TOKEN }}
-#          path: 'docker-compose-microservices'
+#          path: 'docker-formare'
 #
 #      - name: Update and commit app version in docker-compose.yaml in other repository
 #        run: |
-#            cd docker-compose-microservices/
+#            cd docker-formare/
 #            echo -e "Current ./docker-compose.yaml\n$(cat docker-compose.yaml)"
-#            sed -i -E 's_(ion21/client-service:)([^"]*)_\1'${{ env.BUILD_NUMBER }}'_' docker-compose.yaml
+#            sed -i -E 's_(ion21/client-new-cfp:)([^"]*)_\1'${{ env.BUILD_NUMBER }}'_' docker-compose.yaml
 #            echo -e "Updated ./docker-compose.yaml\n$(cat docker-compose.yaml)"
 #            git config user.name github-actions
 #            git config user.email github-actions@github.com
