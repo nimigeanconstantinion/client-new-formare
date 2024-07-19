@@ -65,7 +65,7 @@ export default class Api{
 
     getCursByNr= async (nrc:number): Promise<Curs> => {
 
-        let response = await this.api(`http://127.0.0.1:5000/api/v1/loader/cursbyid/${nrc}`, "GET", null);
+        let response = await this.api(`/api/v1/loader/cursbyid/${nrc}`, "GET", null);
         if(response.status===200){
             // console.log("Raspuns")
             // console.log(response.data);
@@ -92,7 +92,7 @@ export default class Api{
     }
 
     getNomenclatorFormare=async ():Promise<Nomenclator[]>=>{
-        let response= await this.api('http://localhost:8080/api/v1/loader/nomenclator','GET',null);
+        let response= await this.api('/api/v1/loader/nomenclator','GET',null);
         if(response.status==200){
             return response.json();
         }else{
@@ -101,7 +101,7 @@ export default class Api{
     }
 
     filterNomenclatorFormareByDen=async (den:string):Promise<Nomenclator[]>=>{
-        let response= await this.api(`http://localhost:8080/api/v1/loader/nomenclator/${den}`,'GET',null);
+        let response= await this.api(`/api/v1/loader/nomenclator/${den}`,'GET',null);
         if(response.status==200){
             return response.json();
         }else{
@@ -112,7 +112,7 @@ export default class Api{
 
     getAutorizatii=async (den:string|null):Promise<Autorizatie[]>=>{
 
-        let response= await this.api(`http://localhost:8080/api/v1/test/autorizatii/${den!=null&&den.includes('/')==false?den:''}`,'GET',null);
+        let response= await this.api(`/api/v1/test/autorizatii/${den!=null&&den.includes('/')==false?den:''}`,'GET',null);
         if(response.status==200){
             return response.json();
         }else{
@@ -122,7 +122,7 @@ export default class Api{
 
     getListaNumeByCNP=async (cnp:string|null):Promise<Nume[]>=>{
 
-        let response= await this.api(`http://localhost:8080/api/v1/nume/${cnp}`,'GET',null);
+        let response= await this.api(`/api/v1/nume/${cnp}`,'GET',null);
         if(response.status==200){
             return response.json();
         }else{
@@ -133,7 +133,7 @@ export default class Api{
 
     getLocalitateByCod=async (cod: number):Promise<Localitate>=>{
 
-        let response= await this.api(`http://localhost:8080/api/v1/test/siruta/${cod}`,'GET',null);
+        let response= await this.api(`/api/v1/test/siruta/${cod}`,'GET',null);
         if(response.status==200){
             return response.json();
         }else{
