@@ -13,7 +13,7 @@ export default class Api{
 
     api<T, U>(path: string, method = "GET", body: U): Promise<HttpResponse<T>> {
 
-        const prefixP=process.env.API_URL;
+        const prefixP="http://192.168.0.112:5000";
 
         console.log("Calea ="+prefixP);
         // const bpath  ='http://host.docker.internal:5000';
