@@ -12,11 +12,11 @@ export default class Api{
 
     api<T, U>(path: string, method = "GET", body: U): Promise<HttpResponse<T>> {
 
-        // const bpath="http://127.0.0.1:5000"
+        const prefixP="http://docker-host:5000"
 
         // const bpath  ='http://host.docker.internal:5000';
 
-        const url =path;
+        const url =prefixP+path;
         console.log(url);
         const options: RequestInit = {
             method,
@@ -35,7 +35,7 @@ export default class Api{
 
     getNomCor = async (trunc:string): Promise<NomCor[]> => {
 
-        let response = await this.api("http://127.0.0.1:5000/api/v1/test/nomenclator/"+trunc, "GET", null);
+        let response = await this.api("/api/v1/test/nomenclator/"+trunc, "GET", null);
         if(response.status===200){
             console.log("Raspuns")
             console.log(response.data);
@@ -51,7 +51,7 @@ export default class Api{
 
     getPersByCnp = async (cnp:string): Promise<Persoana> => {
 
-        let response = await this.api(`http://127.0.0.1:5000/api/v1/loader/getpersbycnp/${cnp}`, "GET", null);
+        let response = await this.api(`/api/v1/loader/getpersbycnp/${cnp}`, "GET", null);
         if(response.status===200){
             console.log("Raspuns")
             console.log(response.data);
