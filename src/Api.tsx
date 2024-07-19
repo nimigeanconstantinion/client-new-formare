@@ -14,7 +14,7 @@ export default class Api{
 
         // const bpath="http://127.0.0.1:5000"
 
-        const bpath     ="http://host.docker.internal:5000"
+        const bpath:string  ="http://host.docker.internal:5000"
 
         const url =bpath+path;
 console.log(url);
