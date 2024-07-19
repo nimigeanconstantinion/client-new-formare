@@ -14,10 +14,10 @@ export default class Api{
 
         // const bpath="http://127.0.0.1:5000"
 
-        const bpath:string  ="http://192.168.0.112:5000"
+        const bpath  ='http://192.168.0.112:5000';
 
         const url =bpath+path;
-console.log(url);
+        console.log(url);
         const options: RequestInit = {
             method,
             mode: 'cors',
