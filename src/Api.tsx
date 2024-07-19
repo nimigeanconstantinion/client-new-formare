@@ -12,7 +12,10 @@ export default class Api{
 
     api<T, U>(path: string, method = "GET", body: U): Promise<HttpResponse<T>> {
 
-        const bpath="http://127.0.0.1:5000"
+        // const bpath="http://127.0.0.1:5000"
+
+        const bpath     ="http://host.docker.internal:5000"
+
         const url =bpath+path;
 console.log(url);
         const options: RequestInit = {
