@@ -14,9 +14,9 @@ export default class Api{
 
         // const bpath="http://127.0.0.1:5000"
 
-        const bpath  ='http://host.docker.internal:5000';
+        // const bpath  ='http://host.docker.internal:5000';
 
-        const url =bpath+path;
+        const url =path;
         console.log(url);
         const options: RequestInit = {
             method,
@@ -35,7 +35,7 @@ export default class Api{
 
     getNomCor = async (trunc:string): Promise<NomCor[]> => {
 
-        let response = await this.api("/api/v1/test/nomenclator/"+trunc, "GET", null);
+        let response = await this.api("http://127.0.0.1:5000/api/v1/test/nomenclator/"+trunc, "GET", null);
         if(response.status===200){
             console.log("Raspuns")
             console.log(response.data);
@@ -51,7 +51,7 @@ export default class Api{
 
     getPersByCnp = async (cnp:string): Promise<Persoana> => {
 
-        let response = await this.api(`/api/v1/loader/getpersbycnp/${cnp}`, "GET", null);
+        let response = await this.api(`http://127.0.0.1:5000/api/v1/loader/getpersbycnp/${cnp}`, "GET", null);
         if(response.status===200){
             console.log("Raspuns")
             console.log(response.data);
@@ -65,7 +65,7 @@ export default class Api{
 
     getCursByNr= async (nrc:number): Promise<Curs> => {
 
-        let response = await this.api(`/api/v1/loader/cursbyid/${nrc}`, "GET", null);
+        let response = await this.api(`http://127.0.0.1:5000/api/v1/loader/cursbyid/${nrc}`, "GET", null);
         if(response.status===200){
             // console.log("Raspuns")
             // console.log(response.data);
