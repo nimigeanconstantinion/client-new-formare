@@ -24,8 +24,8 @@ export default class Api{
             method,
             mode: 'cors',
             headers: {
-                "Content-Type": "application/json;charset=utf-8"
-                // "Access-Control-Allow-Origin": "http://localhost:3000"
+                "Content-Type": "application/json;charset=utf-8",
+                "Access-Control-Allow-Origin": "http://codeplus.ddns.net:3000"
             },
 
 
