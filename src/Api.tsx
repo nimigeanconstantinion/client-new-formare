@@ -7,13 +7,15 @@ import Persoana, {Localitate} from "./models/Persoana";
 import Curs, {Autorizatie} from "./models/Objects";
 import Nomenclator from "./models/NomCor";
 import {Nume} from "./models/Cursant";
+import {log} from "util";
 
 export default class Api{
 
     api<T, U>(path: string, method = "GET", body: U): Promise<HttpResponse<T>> {
 
-        const prefixP="http://192.168.0.112.:5000"
+        const prefixP=process.env.API_URL;
 
+        console.log("Calea ="+prefixP);
         // const bpath  ='http://host.docker.internal:5000';
 
         const url =prefixP+path;
