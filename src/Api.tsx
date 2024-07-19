@@ -12,7 +12,7 @@ export default class Api{
 
     api<T, U>(path: string, method = "GET", body: U): Promise<HttpResponse<T>> {
 
-        const prefixP="http://docker-host:5000"
+        const prefixP="http://homesrv:5000"
 
         // const bpath  ='http://host.docker.internal:5000';
 
