@@ -47,3 +47,12 @@
   background-color: #B38EC4 !important;
 }
 
+.fldinput div.p-dropdown-items-wrapper{
+  width: 200px !important;
+  min-width: 200px !important;
+}
+
+.fldinput div.p-dropdown-panel.p-component.p-ripple-disabled.p-connected-overlay-enter-done{
+  width: 200px !important;
+  min-width: 200px !important;
+}

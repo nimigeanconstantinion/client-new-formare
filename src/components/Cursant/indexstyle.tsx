@@ -76,7 +76,7 @@ export const WrapperCusant=styled.div`
   }
 
   .p_fld{
-    height: auto;
+    height: 50px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -132,11 +132,22 @@ export const WrapperCusant=styled.div`
 
   .divCurs3{
     background-color: #ebbc74ff;
-    height: auto;
+    height: 140px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     
+
+
+  }
+
+  .divCurs4{
+    background-color: #1f1307ff;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
 
 
   }
@@ -164,6 +175,10 @@ export const WrapperCusant=styled.div`
 
   .mediumtext{
     width: 120px !important;
+  }
+
+  .mediumtext2{
+    width: 280px !important;
   }
   .smalltext1{
     width: 70px !important;  
@@ -227,5 +242,9 @@ export const WrapperCusant=styled.div`
     width: 190px !important;
   }
   //
+  
+ 
+  
+  
   
 `

@@ -9,11 +9,14 @@ import Nomenclator from "./models/NomCor";
 import {Nume} from "./models/Cursant";
 import {log} from "util";
 
+//keep  // ,
+//                 // "Access-Control-Allow-Origin": "http://localhost:3000"
+
 export default class Api{
 
     api<T, U>(path: string, method = "GET", body: U): Promise<HttpResponse<T>> {
 
-        const prefixP="http://192.168.0.112:5000";
+        const prefixP='http://localhost:5000';
 
         console.log("Calea ="+prefixP);
         // const bpath  ='http://host.docker.internal:5000';
@@ -24,8 +27,7 @@ export default class Api{
             method,
             mode: 'cors',
             headers: {
-                "Content-Type": "application/json;charset=utf-8",
-                "Access-Control-Allow-Origin": "http://codeplus.ddns.net:3000"
+                "Content-Type": "application/json;charset=utf-8"
             },
 
 

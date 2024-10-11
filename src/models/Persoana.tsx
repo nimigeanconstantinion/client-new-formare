@@ -17,7 +17,7 @@ export interface CarteIdentitate {
 
 
 
-interface Adresa {
+export interface Adresa {
     id: number; // Assuming id is a number type
 
     persoana: Persoana; // Reference to Persoana object

@@ -8,7 +8,9 @@ import {WrapperCusant} from "./indexstyle";
 import {CarteIdentitate} from "../../models/Persoana";
 import CIComp from "../SearchableDropDown/autocomp_multifield_local_filter"
 import AdresaComp from "../Adresa/index"
+import DetaliiComp from "../DetaliiCursant/index"
 
+import GrdRow from "../TestGrdDinamic/indexRow"
 interface CursantProps{
     idCursant:number
 
@@ -353,6 +355,11 @@ const CursantComp:React.FC<CursantProps>=({idCursant})=>{
 
                             <div className={"divCurs3"}>
                                 <AdresaComp persoana={crtCursant?.persoana}/>
+
+                            </div>
+
+                            <div className={"divCurs4"}>
+                                <DetaliiComp crtCursant={crtCursant}/>
 
                             </div>
 

@@ -32,8 +32,8 @@ export interface Cursant{
 }
 
 
-interface PerioadaSomaj{
-    id: number; // Assuming id is of type number
+export interface PerioadaSomaj{
+    id: number|null; // Assuming id is of type number
     nrSomaj: string;
     dataStartSomaj: Date;
     dataSfSomaj: Date;
@@ -120,4 +120,9 @@ export interface Nume{
     nume: string,
     prenume: string,
     dataAdd?: Date
+}
+
+export enum SLD{
+    TRUE="true",
+    FALSE="false"
 }

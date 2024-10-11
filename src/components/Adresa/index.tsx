@@ -2,7 +2,7 @@ import Persoana, {MediuLocalitate} from "../../models/Persoana";
 import React, {useEffect, useRef, useState} from "react";
 import Api from "../../Api";
 import SimpleTipLoca, {DataSimple} from "../SearchableDropDown/index_simple"
-import {Data} from "../SearchableDropDown";
+import {Data, LoadType} from "../SearchableDropDown";
 import Simpl from "../SearchableDropDown/index_simple";
 
 interface AdresaProps{
@@ -93,7 +93,7 @@ interface AdresaProps{
         refLocaSup.current.value=lsup;
         setTipLoca([]);
         Object.values(MediuLocalitate).map((t,index)=>{
-            let ds:DataSimple={name: t.valueOf(),code: index.toString(),load: null };
+            let ds:DataSimple={name: t.valueOf(),code: index.toString(),load: null};
             console.log("Adaug");
             console.log(ds);
             setTipLoca(prevState => [...prevState,ds]);
@@ -213,7 +213,7 @@ interface AdresaProps{
             <div className={"p_fld div_email"}>
                 <label className={"lblCi"} htmlFor={"pers_email"}>Email</label>
 
-                <input  ref={refEmail} type={"text"} className={"search tel mediumtext"} id={"pers_email"} defaultValue={""} />
+                <input  ref={refEmail} type={"text"} className={"search tel mediumtext2"} id={"pers_email"} defaultValue={""} />
 
             </div>
 
@@ -225,7 +225,7 @@ interface AdresaProps{
 
                     {
                         tipLoca.length>0?(
-                            <Simpl  data={tipLoca} defaultObj={undefined} returnFunction={null} isrw={false}/>
+                            <Simpl  data={tipLoca} defaultObj={defaTipLoca} returnFunction={null} isrw={false}/>
 
                         ):""
 

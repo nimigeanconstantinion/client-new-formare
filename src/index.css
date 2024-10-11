@@ -61,6 +61,8 @@ div.divname{
 }
 .p-dropdown-items-wrapper{
   background-color: #ebbc74ff;
+  /*background-color: #c48080;*/
+  /*min-width: 200px;*/
 }
 .p-autocomplete-item:hover{
   background-color: #d5d4d2;
@@ -94,3 +96,12 @@ div.p-dropdown-pannel {
 
 }
 
+/*.fldinput.p-dropdown-items-wrapper{*/
+/*  !*width: 200px !important;*!*/
+/*  min-width: 120px !important;*/
+/*}*/
+
+/*.fldinput {*/
+/*  width: 200px !important;*/
+/*  min-width: 200px !important;*/
+/*}*/
